@@ -37,6 +37,18 @@ public class Spitter {
         return password;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     public String toString() {
         return id + username + password + firstName + lastName + email;
     }

@@ -30,7 +30,8 @@ public class JdbcSpitterRepository implements SpitterRepository {
         return new JdbcTemplate(dataSource);
     }
 
-    public void save(Spitter spitter) {
+    public Spitter save(Spitter spitter) {
+        return new Spitter();
     }
 
     public Spitter findByUsername(String username) {
