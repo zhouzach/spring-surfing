@@ -36,4 +36,27 @@ public class Spitter {
     public String getPassword() {
         return password;
     }
+
+    public String toString() {
+        return id + username + password + firstName + lastName + email;
+    }
+
+    public Spitter() {
+    }
+
+    public Spitter(Long id, String username, String password, String firstName, String lastName, String email) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+    }
+
+    public static void main(String[] args) {
+//        Spitter spitter = new Spitter();
+        Spitter spitter = new Spitter(1L, "s", "p", "f", "l", "e");
+        System.out.print(spitter);
+
+    }
 }
