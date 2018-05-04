@@ -8,6 +8,7 @@ import java.util.Date;
 public class Spittle {
     private final Long id;
     private final String message;
+    private Spitter spitter;
     private final Date time;
     private Double latitude;
     private Double longitude;

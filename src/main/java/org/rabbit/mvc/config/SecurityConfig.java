@@ -1,5 +1,6 @@
 package org.rabbit.mvc.config;
 
+import com.sun.jersey.spi.inject.Inject;
 import org.rabbit.mvc.data.HibernateSpitterRepository;
 import org.rabbit.mvc.data.SpitterRepository;
 import org.rabbit.mvc.security.SpitterUserService;
