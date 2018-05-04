@@ -3,6 +3,7 @@ package org.rabbit.mvc.data;
 import org.rabbit.mvc.Spitter;
 import org.rabbit.mvc.config.DataSourceConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.core.JdbcOperations;
