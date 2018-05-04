@@ -20,7 +20,7 @@ public class SpitterUserService implements UserDetailsService {
         this.spitterRepository = spitterRepository;
     }
 
-//    @Override
+    @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 
         Spitter spitter = spitterRepository.findByUsername(username);

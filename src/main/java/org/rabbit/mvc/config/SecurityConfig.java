@@ -1,19 +1,23 @@
 package org.rabbit.mvc.config;
 
+import org.rabbit.mvc.data.HibernateSpitterRepository;
 import org.rabbit.mvc.data.SpitterRepository;
 import org.rabbit.mvc.security.SpitterUserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+@Import(HibernateSpitterRepository.class)
 @Configuration
 @EnableWebMvc
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    //    @Autowired
+    @Autowired
     SpitterRepository spitterRepository;
 
     @Override

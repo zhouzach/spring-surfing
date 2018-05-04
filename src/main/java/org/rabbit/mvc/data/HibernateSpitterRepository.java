@@ -4,13 +4,18 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
 import org.rabbit.mvc.Spitter;
+import org.rabbit.mvc.config.RepositoryConfig;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
 import java.io.Serializable;
 import java.util.List;
 
+@Import(RepositoryConfig.class)
 @Repository
+@Primary
 public class HibernateSpitterRepository implements SpitterRepository {
     @Autowired
     public SessionFactory sessionFactory;
